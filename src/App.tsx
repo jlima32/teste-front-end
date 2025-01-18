@@ -1,3 +1,4 @@
+import Categories from "./components/Categories/Categories";
 import Header from "./components/Header/Header";
 import Promotions from "./components/Promotions/Promotions";
 
@@ -7,6 +8,7 @@ function App() {
     <>
       <Header />
       <Promotions />
+      <Categories />
     </>
   )
 }
