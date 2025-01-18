@@ -1,0 +1,81 @@
+@use '../../styles/variables'
+
+.header-container
+    width: 1280px
+    height: 144px
+    padding-top: 6px
+
+    .header-top
+        width: 764px
+        height: 20px
+        font-size: 12px
+        font-weight: 500
+        color: variables.$text-color
+        display: flex
+        align-items: center
+
+        .header-top-1
+            display: flex
+            align-items: center
+            justify-content: space-around
+            width: 158px
+        .header-top-2
+            display: flex
+            align-items: center
+            justify-content: space-around
+            width: 203px
+        .header-top-3
+            display: flex
+            align-items: center
+            justify-content: space-around
+            width: 165px
+    
+    .header-content
+        width: 1280px
+        height: 72px
+        margin-top: 6px
+        border-top: variables.$border-gray
+        border-bottom: variables.$border-gray
+        display: flex
+        align-items: center
+        padding-bottom: 2px
+
+        .logo
+            img
+                width: 139px
+        .search
+            width: 630px
+            height: 48px
+
+            .search-txt
+                width: 100%
+                height: 100%
+                border-radius: 10px
+                padding-left: 16px
+                border: 0
+                outline: 0
+                background-color: variables.$input-bg-color
+                color: variables.$text-color
+                font-size: 14px
+                font-weight: 500
+
+                &::placeholder
+                    color: variables.$text-color
+        
+        .icons
+            width: 216px
+            height: 32px
+            display: flex
+            align-items: center
+
+            img 
+                width: 32px
+            img:first-child
+                width: 24px
+
+img
+    width: 20px
+
+.highlight
+    color: variables.$text-color-secondary
+    font-weight: 600
