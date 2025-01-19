@@ -1,0 +1,96 @@
+@use '../../styles/variables'
+
+#footer-container
+    width: 1440px
+    height: 282px
+    background-color: variables.$card-bg-color
+
+    .footer-links
+        width: 1440px
+        height: 282px
+        display: flex
+        align-items: center
+        padding-left: 70px
+
+        .social-networks
+            margin: 0
+            width: 30%
+            display: flex
+            flex-direction: column
+            justify-content: center
+            border-right: 1px solid rgba(40,40,40, 0.18)
+
+            .footer-logo
+                margin: 0
+                width: 164px
+                height: 48px
+            
+            p
+                margin: 0
+                margin-top: 18px
+                font-size: 14px
+                font-weight: 300
+                color: variables.$text-color-product-primary
+                width: 80%
+
+            .social-network-icons
+                margin: 0
+                margin-top: 27px
+                width: 124px
+                display: flex
+                align-items: center
+                justify-content: space-between
+
+                img
+                    margin: 0
+                    width: 24px
+                    height: 24px
+        
+        .links
+            margin: 0
+            width: 55%
+            display: flex
+
+            .links-card
+                height: 216px
+                display: flex
+                flex-direction: column
+                justify-content: center
+
+                .card-title
+                    margin: 0
+                    font-size: 16px
+                    font-weight: 700
+                    line-height: 16px
+                    color: variables.$text-color-footer
+                    margin-bottom: 16px
+
+                ul
+                    list-style: none
+
+                li
+                    a
+                        font-family: variables.$footer-font
+                        text-decoration: none
+                        font-size: 16px
+                        color: variables.$text-color-footer
+                        line-height: 16px
+
+                        &:hover
+                            font-weight: 500
+    
+    .footer-copyright
+        margin: 0
+        width: 1440px
+        height: 46px
+        background-color: variables.$body-bg-color
+        color: variables.$text-color-product-primary
+        font-size: 13px
+        font-weight: 300
+        display: flex
+        align-items: center
+        justify-content: center
+
+
+            
+                
