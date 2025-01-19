@@ -1,4 +1,5 @@
 
+import Button from '../Button/Button'
 import './promotions.sass'
 
 const Promotions = () => {
@@ -7,9 +8,7 @@ const Promotions = () => {
         <div className="shadow">
             <h1>Venha conhecer nossas promoções</h1>
             <p className="text-product"><span>50% Off</span> nos produtos</p>
-            <div className='btn-product'>
-                Ver produto
-            </div>
+            <Button classTitle='btn-product' text='Ver produto'/>
         </div>
     </section>
   )

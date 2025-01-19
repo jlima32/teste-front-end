@@ -6,6 +6,7 @@ import Plus from '../../assets/img/icons/Plus.png'
 
 import { ProductProps } from '../../types/products';
 import { useState } from 'react';
+import Button from '../Button/Button';
 
 interface ModalProps {
   isOpen: boolean;
@@ -43,9 +44,7 @@ const Modal = ({ isOpen, onClose, product }: ModalProps) => {
                 <p className='count' >{count}</p>
                 <img className='plus' src={Plus} alt="Ícone somar" onClick={() => setCount((count) => count + 1)} />
               </div>
-              <div className="modal-btn-buy">
-                Comprar
-              </div>
+              <Button classTitle='modal-btn-buy' text='Comprar' />
             </div>
           </div>
         </div>

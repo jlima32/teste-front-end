@@ -1,3 +1,4 @@
+import Button from '../Button/Button'
 import './newsletter.sass'
 
 const Newsletter = () => {
@@ -11,9 +12,7 @@ const Newsletter = () => {
             <div className="newsletter-form-group">
                 <input type="text" name='name' className='newsletter-input' placeholder='Digite seu nome' />
                 <input type="text" name='email' className='newsletter-input' placeholder='Digite seu email' />
-                <div className="newsletter-btn-submit">
-                    Inscrever
-                </div>
+                <Button classTitle='newsletter-btn-submit' text='Inscrever'/>
             </div>
             <div className="newsletter-terms">
                 <input type="checkbox" name='subscribe' id='subscribeNews' />
