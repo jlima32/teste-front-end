@@ -11,8 +11,9 @@ function App() {
       <Header />
       <Promotions />
       <Categories />
-      <RelatedProducts />
+      <RelatedProducts showNav={true}/>
       <Partners />
+      <RelatedProducts showNav={false}/>
     </>
   )
 }
