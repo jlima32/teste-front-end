@@ -1,0 +1,77 @@
+@use '../../styles/variables'
+@use '../../styles/mixins'
+    
+#newsletter-container
+    width: 1440px
+    height: 162px
+    background-color: variables.$text-color-tertiary
+    color: variables.$text-color-light
+    padding: 40px 0px
+    display: flex
+    align-items: center
+    margin-top: 90px
+
+    .newsletter-left
+        width: 515px
+        height: 82px
+
+        h3
+            font-family: variables.$newsletter-font
+            font-size: 32px
+            font-weight: 600
+            line-height: 38.4px
+
+        p
+            margin-top: 8px
+            line-height: 18px
+            font-size: 14px
+            font-weight: 300
+    
+    .newsletter-right
+        width: 639px
+        height: 71px
+
+        .newsletter-form-group
+            display: flex
+            align-items: center
+
+            .newsletter-input
+                width: 233px
+                height: 42px
+                border-radius: 8px
+                padding: 12px 24px
+                border: 0
+                outline: 0
+                background-color: variables.$input-bg-color
+                color: variables.$text-color
+                font-size: 14px
+                font-weight: 500
+                margin-right: 8px
+
+            .newsletter-btn-submit
+                margin: 0
+                width: 157px
+                height: 42px
+                background-color: variables.$highlight-color
+                font-size: 16px
+                color: variables.$text-color-tertiary
+                font-weight: 700
+                border-radius: 8px
+                cursor: pointer
+                display: flex
+                align-items: center
+                justify-content: center
+                text-transform: uppercase
+
+                &:hover
+                    @include mixins.btn-hover
+                    
+        .newsletter-terms
+            margin: 0
+            display: flex
+            align-items: center
+            width: 226px
+            height: 21px
+            label
+                font-size: 14px
+                margin-top: 2.4px
