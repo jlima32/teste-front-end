@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import ArrowLeft from '../../assets/img/icons/ArrowLeft.png'
 import ArrowRight from '../../assets/img/icons/ArrowRight.png'
 import LinkAllProducts from './LinkAllProducts'
@@ -7,7 +7,6 @@ import Nav from './Nav'
 
 import { ProductProps } from '../../types/products'
 
-import ProductsArrow from "./ProductsArrow"
 import ProductsCard from './ProductsCard'
 
 import './relatedProducts.sass'
@@ -23,7 +22,17 @@ const RelatedProducts = ({ showNav }: { showNav: boolean} ) => {
     .then((data) => setProducts(data.products))
 }, []);
 
+const carousel = useRef(null);
 
+  const handleLeftClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    carousel.current.scrollLeft -= carousel.current.offsetWidth;
+  }
+  
+  const handleRightClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    carousel.current.scrollLeft += carousel.current.offsetWidth;
+  }
 
   return (
     <section className="related-products-container">
@@ -35,11 +44,17 @@ const RelatedProducts = ({ showNav }: { showNav: boolean} ) => {
       </div>
       {showNav ? <Nav /> : <LinkAllProducts />}
       <div className="products-container">
-        <ProductsArrow img={ArrowLeft} alt="Icone seta esquerda"/>
-        {products.map((product) => (
-          <ProductsCard key={product.productName} {...product} />
-        ))}
-        <ProductsArrow img={ArrowRight} alt="Icone seta direita"/>
+        <div className="products-arrow" onClick={handleLeftClick}>
+            <img src={ArrowLeft} alt='Ícone Seta Esquerda' />
+        </div>
+        <div className="products-carousel" ref={carousel}>
+          {products.map((product) => (
+            <ProductsCard key={product.productName} {...product} />
+          ))}
+        </div>
+        <div className="products-arrow" onClick={handleRightClick}>
+            <img src={ArrowRight} alt='Ícone Seta Direita' />
+        </div>
       </div>
       
       
