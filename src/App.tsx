@@ -1,3 +1,4 @@
+import Brands from "./components/Brands/Brands";
 import Categories from "./components/Categories/Categories";
 import Header from "./components/Header/Header";
 import Partners from "./components/Partners/Partners";
@@ -14,6 +15,8 @@ function App() {
       <RelatedProducts showNav={true}/>
       <Partners />
       <RelatedProducts showNav={false}/>
+      <Partners />
+      <Brands />
     </>
   )
 }
