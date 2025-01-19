@@ -1,0 +1,48 @@
+@use '../../styles/variables'
+@use '../../styles/mixins'
+
+.partner-card
+    width: 634px
+    height: 350px
+    color: variables.$text-color-light
+    background-image: url(../../assets/img/PartnersBg.png)
+    background-size: cover
+    border-radius: 16px
+
+    .partner-shadow
+        width: 634px
+        height: 261px
+        margin-top: 89px
+        background-image: linear-gradient(to top, rgba(0,0,0), rgba(0,0,0,0.05))
+        border-radius: 16px
+        padding-top: 30px
+        padding-left: 44px
+
+        .partner-title
+            font-size: 40px
+            font-weight: 700
+
+        .partner-text
+            margin: 0
+            width: 190px
+            font-size: 16px
+        
+        .btn-partner
+            margin: 0
+            margin-top: 32px
+            width: 145px
+            height: 48px
+            background-color: variables.$highlight-color
+            font-size: 16px
+            color: variables.$text-color-tertiary
+            font-weight: 700
+            border-radius: 6px
+            cursor: pointer
+            display: flex
+            align-items: center
+            justify-content: center
+            text-transform: uppercase
+
+            &:hover
+                @include mixins.btn-hover
+                    
