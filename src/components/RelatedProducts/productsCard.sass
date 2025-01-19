@@ -1,0 +1,54 @@
+@use '../../styles/variables'
+@use '../../styles/mixins'
+
+.product-card
+    width: 304px
+    height: 500px
+    border-radius: 6px
+    box-shadow: 0px 4px 11px 0px rgba(0,0,0, 0.13)
+    padding: 22px 13px 16px 13px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+    img
+        width: 278px
+    
+    .product-title
+        color: variables.$text-color-product-primary
+        font-size: 15px
+        font-weight: 300
+    .product-price-old
+        margin: 0
+        color: variables.$text-color-product-secondary
+        font-size: 16px
+        text-decoration: line-through
+    .product-price-new
+        margin: 0
+        color: variables.$text-color-product-primary
+        font-size: 20px
+        font-weight: 700
+    .product-price-opt
+        margin: 0
+        color: variables.$text-color-product-primary
+        font-size: 12px
+    .product-price-ship
+        margin: 0
+        color: variables.$text-color-nav-categories-hover
+        font-size: 12px
+    .btn-product-buy
+        margin-top: 12px
+        width: 276px
+        height: 44px
+        background-color: variables.$text-color-nav-categories-hover
+        text-transform: uppercase
+        display: flex
+        align-items: center
+        justify-content: center
+        border-radius: 4px
+        color: #fff
+        cursor: pointer
+
+        &:hover
+            @include mixins.btn-hover
+            

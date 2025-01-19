@@ -1,0 +1,36 @@
+@use '../../styles/variables'
+@use '../../styles/mixins'
+    
+.related-products-container
+    width: 1364px
+    height: 613px
+    display: flex
+    flex-direction: column
+    margin-top: 90px
+
+    .related-products-header
+        width: 100%
+        display: flex
+        align-items: center
+
+        .border
+            width: 360px
+            height: 1px
+            background-color: variables.$border-color
+        .left
+            margin-left: 140px
+        .right
+            margin-right: 140px
+
+        h2
+            @include mixins.title
+        
+    .products-container
+        width: 1364px
+        height: 500px
+        display: flex
+        align-items: center
+        margin-top: 24px
+    
+            
+    

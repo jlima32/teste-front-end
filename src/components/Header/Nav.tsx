@@ -6,7 +6,7 @@ const Nav = () => {
             <div className="nav-links">
                 <ul>
                     <li><a href="#">Todas Categorias</a></li>
-                    <li><a href="#">Supermercados</a></li>
+                    <li><a href="#">Supermercado</a></li>
                     <li><a href="#">Livros</a></li>
                     <li><a href="#">Moda</a></li>
                     <li><a href="#">Lançamentos</a></li>

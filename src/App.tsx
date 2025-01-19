@@ -1,6 +1,7 @@
 import Categories from "./components/Categories/Categories";
 import Header from "./components/Header/Header";
 import Promotions from "./components/Promotions/Promotions";
+import RelatedProducts from "./components/RelatedProducts/RelatedProducts";
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <Promotions />
       <Categories />
+      <RelatedProducts />
     </>
   )
 }
