@@ -42,8 +42,6 @@ const Modal = ({ isOpen, onClose, product }: ModalProps) => {
                 <img className='minus' src={Minus} alt="Ícone subtrair" onClick={() => {count > 1 ? setCount((count) => count - 1) : '' }} />
                 <p className='count' >{count}</p>
                 <img className='plus' src={Plus} alt="Ícone somar" onClick={() => setCount((count) => count + 1)} />
-                
-                
               </div>
               <div className="modal-btn-buy">
                 Comprar
