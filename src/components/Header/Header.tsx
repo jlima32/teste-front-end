@@ -6,6 +6,7 @@ import Group from '../../assets/img/icons/Group.svg'
 import Heart from '../../assets/img/icons/Heart.svg'
 import UserCircle from '../../assets/img/icons/UserCircle.svg'
 import ShoppingCart from '../../assets/img/icons/ShoppingCart.svg'
+import MagnifyingGlass from '../../assets/img/icons/MagnifyingGlass.svg'
 
 import './header.sass'
 import Nav from './Nav'
@@ -34,6 +35,7 @@ const Header = () => {
             </div>
             <div className="search">
                 <input className='search-txt' type="text" placeholder='o que você está buscando?' />
+                <img src={MagnifyingGlass} alt="Ícone Busca" />
             </div>
             <div className="icons">
                 <img src={Group} alt="ícone pedidos" />
