@@ -67,24 +67,22 @@
                 flex-direction: column
                 justify-content: space-between
                 
-                p
-                font-size: 10px
-                font-weight: 500
-                color: variables.$text-color
-                line-height: 150%
-                letter-spacing: 5%
-
-                a
+                .product-description-text
+                    margin: 0
+                    font-size: 10px
+                    font-weight: 500
+                    color: variables.$text-color
+                    line-height: 150%
+                    letter-spacing: 5%
+                
+                .product-link
                     margin: 0
                     text-decoration: none
                     line-height: 100%
                     letter-spacing: 5%
                     color: variables.$text-color-nav-categories-hover
-                    font-size: 11
+                    font-size: 11px
                     font-weight: 600
-
-                    &:hover
-                        color: variables.$text-color-tertiary
         
         .modal-product-quantity-buy
             margin: 0
@@ -95,7 +93,30 @@
             height: 36px
 
             .quantity
+                margin: 0
                 width: 110px
+                height: 36px
+                display: flex
+                align-items: center
+                justify-content: space-between
+                border: 1px solid variables.$border-color-tertiary
+                border-radius: 4px
+
+                .minus
+                    cursor: pointer
+                    width: 20px
+                    height: 20px
+
+                .count
+                    font-size: 16px
+                    font-weight: 500
+                    color: variables.$text-color-tertiary
+
+                .plus
+                    cursor: pointer
+                    width: 20px
+                    height: 20px
+
 
             .modal-btn-buy
                 margin: 0

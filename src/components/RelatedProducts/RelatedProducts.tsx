@@ -14,6 +14,8 @@ import './relatedProducts.sass'
 const RelatedProducts = ({ showNav }: { showNav: boolean} ) => {
   
   const [products, setProducts] = useState<ProductProps[]>([]);
+  const [selectedProduct, setSelectedProduct] = useState<ProductProps | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const apiUrl = '/api/produtos.json';
 
   useEffect(() => {
@@ -24,19 +26,23 @@ const RelatedProducts = ({ showNav }: { showNav: boolean} ) => {
 
 const carousel = useRef(null);
 
-  const handleLeftClick = (e: React.MouseEvent<HTMLDivElement>) => {
-    e.preventDefault();
-    carousel.current.scrollLeft -= carousel.current.offsetWidth;
-  }
-  
-  const handleRightClick = (e: React.MouseEvent<HTMLDivElement>) => {
-    e.preventDefault();
-    carousel.current.scrollLeft += carousel.current.offsetWidth;
-  }
+const handleLeftClick = (e: React.MouseEvent<HTMLDivElement>) => {
+  e.preventDefault();
+  carousel.current.scrollLeft -= carousel.current.offsetWidth;
+}
+
+const handleRightClick = (e: React.MouseEvent<HTMLDivElement>) => {
+  e.preventDefault();
+  carousel.current.scrollLeft += carousel.current.offsetWidth;
+}
+
+const handleBuyClick = (product: ProductProps) => {
+  setSelectedProduct(product);
+  setIsModalOpen(true);
+}
 
   return (
     <section className="related-products-container">
-      
       <div className="related-products-header">
         <div className="border left"></div>
         <h2>Produtos relacionados {showNav}</h2>
@@ -49,7 +55,11 @@ const carousel = useRef(null);
         </div>
         <div className="products-carousel" ref={carousel}>
           {products.map((product) => (
-            <ProductsCard key={product.productName} {...product} />
+            <ProductsCard
+            key={product.productName}
+            {...product}
+            onBuyClick={handleBuyClick}
+          />
           ))}
         </div>
         <div className="products-arrow" onClick={handleRightClick}>
@@ -57,6 +67,13 @@ const carousel = useRef(null);
         </div>
       </div>
       
+      {isModalOpen && selectedProduct && (
+        <Modal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          product={selectedProduct}
+        />
+      )}
       
     </section>
     
