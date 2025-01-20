@@ -1,3 +1,5 @@
+@use '../../styles/mixins'
+    
 .brand-card
     width: 211px
     height: 211px
@@ -5,6 +7,10 @@
     display: flex
     align-items: center
     box-shadow: 0px 6px 12px 0px rgba(0,0,0, 0.13)
+    transition: transform 0.3s ease, filter 0.3s
+
+    &:hover
+        @include mixins.transform
 
     img
         width: 117px
