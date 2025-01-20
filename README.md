@@ -7,6 +7,7 @@
 ### 💻 Funcionalidades
 
 **1. Vitrine de produtos:** Exibe os produtos consumindo dados de um JSON
+
 **2. Interação com Modal:** Ao clicar em COMPRAR, um modal é exibido com mais informações do produto
 
 #### ⚙️ Executando o projeto
