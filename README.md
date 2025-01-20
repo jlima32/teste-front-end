@@ -28,5 +28,6 @@ npm install
 npm run dev
 ```
 **5. Acesse a aplicação:**
+
 O servidor estará disponível em: http://localhost:5173
 
