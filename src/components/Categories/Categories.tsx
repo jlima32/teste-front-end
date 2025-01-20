@@ -18,37 +18,37 @@ const Categories = () => {
         </div>
         <div className="category-card">
             <div className="category-img">
-                <img src={IconMarket} alt="ícone supermercado" />
+                <img className='hover' src={IconMarket} alt="ícone supermercado" />
             </div>
             <p>Supermercado</p>
         </div>
         <div className="category-card">
             <div className="category-img">
-                <img src={IconWhiskey} alt="ícone bebidas" />
+                <img className='hover' src={IconWhiskey} alt="ícone bebidas" />
             </div>
             <p>Bebidas</p>
         </div>
         <div className="category-card">
             <div className="category-img">
-                <img src={IconTools} alt="ícone ferramentas" />
+                <img className='hover' src={IconTools} alt="ícone ferramentas" />
             </div>
             <p>Ferramentas</p>
         </div>
         <div className="category-card">
             <div className="category-img">
-                <img src={IconHealth} alt="ícone saúde" />
+                <img className='hover' src={IconHealth} alt="ícone saúde" />
             </div>
             <p>Saúde</p>
         </div>
         <div className="category-card">
             <div className="category-img">
-                <img src={IconSports} alt="ícone esportes e fitness" />
+                <img className='hover' src={IconSports} alt="ícone esportes e fitness" />
             </div>
             <p>Esportes e Fitness</p>
         </div>
         <div className="category-card">
             <div className="category-img">
-                <img src={IconFashion} alt="ícone moda" />
+                <img className='hover' src={IconFashion} alt="ícone moda" />
             </div>
             <p>Moda</p>
         </div>
